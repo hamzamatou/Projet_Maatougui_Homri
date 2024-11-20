@@ -1,0 +1,38 @@
+<app-navbar></app-navbar>
+<div class="container">
+<ul class="list-group">
+    @for (item of cart.items; track item.sweet.id) {
+      <li class="list-group-item">
+        <div>
+          <img [src]="item.sweet.photo" alt="{{ item.sweet.name }}">
+        </div>
+        <div>
+          <a [routerLink]="['/sweet', item.sweet.id]">
+            {{ item.sweet.name }}
+          </a>
+        </div>
+        <div>
+          <input type="number"
+                 [value]="item.quantite"
+                 min="1"
+                 max="{{ item.sweet.quantite }}"
+                 #quantityInput>
+          <button (click)="onChangeQuantity(item.sweet.id, quantityInput.valueAsNumber)" class="btn">Valider</button>
+        </div>
+        <div >
+          {{item.price}}DT pour:{{item.quantite}}kg
+        </div>
+        <div>
+            <button class="btn" (click)="OnRemoveFromCart(item.sweet.id,item)">
+                <i class="bi bi-eraser"></i>
+              Remove
+            </button>
+          </div>
+      </li>
+    }
+  </ul>
+  <div class="total-price">{{cart.totalPrice}}</div>
+  <div class="d-flex justify-content-center">
+  <button routerLink="/sweets" id="retour" ><i class="bi bi-arrow-bar-up"></i>Retour</button>
+</div>
+</div>

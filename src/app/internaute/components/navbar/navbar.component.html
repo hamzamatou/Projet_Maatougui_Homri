@@ -1,0 +1,26 @@
+<div class="container-fluid" id="nav">
+  <header>
+      <div class="container">
+         <img src="logo.png" alt="" class="logo">
+          <nav>
+              <ul> 
+                  <li class="menu">
+                      <span>Categories</span>
+                      <select [(ngModel)]="searchCategory" style="background-color:rgb(234, 237, 237) ; border: none;">
+                          <option value="tous">tous</option>
+                          <option value="traditionelle">Traditionelle</option>
+                          <option value="naissance">Naissance</option>
+                      </select>
+                  </li>
+                  <li><a class="menu" routerLink="/favorite"><i class="bi bi-heart"></i></a></li>
+                  <li class="menu"><a routerLink="/shop"><i class="bi bi-shop-window"><sup>{{nbr}}</sup></i></a></li> 
+                  <li class="menu"><a routerLink="/contact"><i class="bi bi-person-circle"></i></a></li>
+              </ul>
+          </nav>
+      </div>
+  </header>
+</div>
+<div id="Search">
+  <input type="text" placeholder="chercher votre sweet!" [(ngModel)]="searchName"/>
+  <button><i class="bi bi-search" (click)="emitSearch()"></i></button>
+</div>

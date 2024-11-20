@@ -1,0 +1,54 @@
+{
+  "gateaux": [
+    {
+      "id": "1",
+      "name": "Datte farcie aux noisettes",
+      "photo": "photos/photo1.jpg",
+      "price": 75,
+      "favorite": true,
+      "date_creation": "14/11/2024",
+      "quantite": 16,
+      "category": "traditionelle",
+      "weight": 20,
+      "comments": [
+        {
+          "user_name": "ons",
+          "date_comment": "2024-11-20T11:25:11.713Z",
+          "message": "magnifique!"
+        },
+        {
+          "user_name": "ahmed",
+          "date_comment": "2024-11-20T11:31:31.643Z",
+          "message": "délicieuse"
+        },
+        {
+          "user_name": "ali",
+          "date_comment": "2024-11-20T11:43:03.319Z",
+          "message": "très original"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "name": "Datte farcie aux amandes",
+      "photo": "photos/photo2.jpg",
+      "price": 75,
+      "favorite": false,
+      "date_creation": "13/11/2024",
+      "quantite": 2,
+      "category": "traditionelle",
+      "weight": 20
+    },
+    {
+      "id": "3",
+      "name": "Macaron chocolat",
+      "photo": "photos/photo3.jpg",
+      "price": 60,
+      "favorite": false,
+      "date_creation": "14/11/2024",
+      "quantite": 4,
+      "category": "naissance",
+      "weight": 14
+    }
+  ]
+}
