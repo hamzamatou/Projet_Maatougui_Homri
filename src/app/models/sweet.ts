@@ -15,7 +15,7 @@ export class Sweet {
         name: string,
         photo: string,
         price: number,
-        favorite: boolean,
+      
         date_creation: Date,
         category:string,
         weight:number,
@@ -25,7 +25,7 @@ export class Sweet {
         this.name = name;
         this.photo = photo;
         this.price = price;
-        this.favorite = favorite;
+        this.favorite = false;
         this.date_creation = date_creation;
         this.category=category;
         this.weight=weight;

@@ -1,0 +1,130 @@
+/* Style général du formulaire */
+.container {
+    margin-top: 20px;
+    font-family: serif;   
+  }
+  /* Style pour le h1 */
+/* Style professionnel pour h1 */
+h2 {
+   font-family: serif;
+    font-size: 2.2rem; /* Taille modérée pour un titre bien lisible */
+    color: #333; /* Couleur sombre pour le texte, sobre et élégant */
+    font-weight: 600; /* Légèrement plus épais que la normale, mais pas trop */
+    text-align: center; /* Centrer le titre sur la page */
+    letter-spacing: 1px; /* Espacement modéré entre les lettres pour une meilleure lisibilité */
+    margin-top: 40px; /* Marge supérieure pour donner de l'espace */
+    margin-bottom: 20px; /* Marge inférieure pour espacer du reste du contenu */
+    text-transform: capitalize; /* Capitaliser chaque mot du titre pour une meilleure apparence */
+    line-height: 1.4; /* Interligne pour que le titre soit bien aéré */
+    box-shadow: 0 4px 8px rgba(232, 57, 211, 0.1); /* Ombre subtile pour faire ressortir le titre */
+    padding: 10px 0; /* Padding vertical pour aérer le titre */
+    border-bottom: 2px solid #e72991;; /* Ligne fine en bas pour ajouter du contraste */
+  }
+  
+  /* Effet au survol */
+  h2:hover {
+    color: #e72991;; /* Changer la couleur en un bleu plus foncé au survol */
+    cursor: pointer; /* Changer le curseur pour indiquer l'interaction */
+    transform: translateY(-3px); /* Légère élévation au survol */
+    transition: all 0.3s ease; /* Transition fluide pour l'effet */
+  }
+  
+  
+  
+  form {
+    font-family: serif; 
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+  
+  /* Style des champs de formulaire */
+  .form-label {
+    font-weight: bold;
+  }
+  
+  .form-control {
+    border-radius: 5px;
+    border: 1px solid #ddc0c0;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 5px;
+    margin-bottom: 15px;
+  }
+  
+  /* Styles pour les inputs invalides */
+  .form-control.ng-invalid.ng-touched {
+    border-color: #dc3545;
+  }
+  
+  .form-control.ng-valid.ng-touched {
+    border-color: #28a745;
+  }
+  
+  /* Message d'erreur */
+  .form-control.ng-invalid.ng-touched:focus {
+    box-shadow: 0 0 5px #dc3545;
+  }
+  
+  .form-text {
+    color: #dc3545;
+    font-size: 0.875em;
+    margin-top: 5px;
+  }
+  
+  
+  /* Ajout d'un petit espace entre les éléments */
+  .mb-3 {
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Styles pour les champs obligatoires (asterisque) */
+  .form-label:after {
+    content: '*';
+    color: #dc3545;
+    margin-left: 5px;
+  }
+/* Style du bouton avec plus d'effets visuels */
+.btn-primary {
+    background: #e72991; /* Dégradé de bleu à turquoise */
+    border: none; /* Enlever la bordure par défaut */
+    padding: 12px 25px; /* Taille du bouton */
+    color: white; /* Texte blanc */
+    font-size: 1.1em; /* Taille du texte */
+    font-weight: bold; /* Texte en gras */
+    border-radius: 50px; /* Coins très arrondis pour un effet moderne */
+    cursor: pointer; /* Pointeur au survol */
+    transition: all 0.4s ease-in-out; /* Animation fluide pour le survol */
+    text-transform: uppercase; /* Texte en majuscules */
+    box-shadow: 0 5px 15px rgba(124, 80, 119, 0.3); /* Ombre subtile autour du bouton */
+    display: inline-block;
+  }
+  
+  /* Effet au survol (hover) */
+  .btn-primary:hover {
+    background: #e72991; /* Changement de dégradé au survol */
+    transform: scale(1.05); /* Légère augmentation de la taille au survol */
+    box-shadow: 0 8px 25px rgba(24, 52, 83, 0.4); /* Ombre plus marquée au survol */
+  }
+  
+  /* Effet au clic (active) */
+  .btn-primary:active {
+    background: #e72991; /* Dégradé encore plus foncé */
+    transform: scale(0.98); /* Réduction de taille au clic */
+    box-shadow: 0 2px 8px rgba(95, 2, 78, 0.5); /* Ombre plus réduite */
+  }
+  
+  /* Bouton désactivé */
+  .btn-primary:disabled {
+    background: #ccc; /* Couleur gris clair */
+    border-color: #aaa;
+    color: #666; /* Texte gris clair */
+    cursor: not-allowed; /* Curseur indiquant que le bouton est désactivé */
+    box-shadow: none; /* Pas d'ombre pour les boutons désactivés */
+  }
+  
+  

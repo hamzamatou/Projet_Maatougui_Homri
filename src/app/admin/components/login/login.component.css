@@ -12,6 +12,7 @@ body{
     align-items: center;
     min-height: 100vh;
     background: linear-gradient(90deg, #e2e2e2, #dce3e3);
+   
 }
 
 .container{
@@ -25,6 +26,7 @@ body{
     overflow: hidden;
     left: 200px;
     top: 50px;
+  
 }
 
     .container h1{

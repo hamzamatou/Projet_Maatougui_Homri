@@ -32,4 +32,7 @@ export class SweetService {
   deleteSweet(id: number): Observable<void> {
     return this.http.delete<void>(`${API}/${id}`);
   }
+  addSweet(sweet: Sweet): Observable<Sweet> {
+    return this.http.post<Sweet>(API, sweet);
+  }
 }

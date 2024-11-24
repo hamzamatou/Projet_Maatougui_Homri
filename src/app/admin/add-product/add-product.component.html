@@ -1,0 +1,41 @@
+
+<h2>Ajouter un produit sucré</h2>
+<div class="container">
+<form [formGroup]="sweetForm" (ngSubmit)="onSubmit()">
+  <div class="mb-3">
+    <label for="name" class="form-label">Nom du produit</label>
+    <input id="name" formControlName="name" class="form-control" required>
+  </div>
+
+  <div class="mb-3">
+    <label for="photo" class="form-label">URL de la photo</label>
+    <input id="photo" formControlName="photo" class="form-control" required>
+  </div>
+
+  <div class="mb-3">
+    <label for="price" class="form-label">Prix</label>
+    <input id="price" type="number" formControlName="price" class="form-control" min="0" required>
+  </div>
+  <div class="mb-3">
+    <label for="datecreation" class="form-label">Date de création</label>
+    <input id="datecreation" type="date" formControlName="datecreation" class="form-control" required>
+  </div>
+
+  <div class="mb-3">
+    <label for="category" class="form-label">Catégorie</label>
+    <input id="category" formControlName="category" class="form-control" required>
+  </div>
+
+  <div class="mb-3">
+    <label for="weight" class="form-label">Poids</label>
+    <input id="weight" type="number" formControlName="weight" class="form-control" min="0" required>
+  </div>
+
+  <div class="mb-3">
+    <label for="quantite" class="form-label">Quantité</label>
+    <input id="quantite" type="number" formControlName="quantite" class="form-control" min="1" required>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Ajouter le produit</button>
+</form>
+</div>

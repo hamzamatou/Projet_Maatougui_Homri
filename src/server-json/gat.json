@@ -29,21 +29,22 @@
       ]
     },
     {
-      "id": "3",
-      "name": "Macaron chocolat",
+      "id": "4",
+      "name": "macaron chocolat",
       "photo": "photos/photo3.jpg",
-      "price": 60,
+      "price": 110,
       "favorite": false,
-      "date_creation": "14/11/2024",
-      "quantite": 11,
-      "category": "naissance",
-      "weight": 14
+      "date_creation": "2024-11-24",
+      "category": "naissance ",
+      "weight": 14,
+      "comments": [],
+      "quantite": 20
     }
   ],
-  "admin":[
+  "admin": [
     {
-      "userName":"admin",
-      "password":"12345678"
+      "userName": "admin",
+      "password": "12345678"
     }
   ]
 }

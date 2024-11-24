@@ -7,6 +7,8 @@ import { ContactComponent } from './internaute/components/contact/contact.compon
 import { LoginComponent } from './admin/components/login/login.component';
 import { LayoutComponent } from './admin/components/layout/layout.component';
 import { ProductsComponent } from './admin/components/products/products.component';
+import { ModifierPasswordComponent } from './admin/components/modifier-password/modifier-password.component';
+import { AddProductComponent } from './admin/add-product/add-product.component';
 
 export const routes: Routes = [
     {path:'sweets',component:SweetListComponent},
@@ -31,7 +33,18 @@ export const routes: Routes = [
             {
                 path:'',
                 redirectTo:'products',pathMatch:'full'
+            },
+            {
+                path:'add-product',
+                component:AddProductComponent
+            },
+            {
+                path:'modifier-password',
+                component:ModifierPasswordComponent
+
             }
+
         ]
     },
+    
 ];
