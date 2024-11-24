@@ -39,12 +39,313 @@
       "weight": 14,
       "comments": [],
       "quantite": 20
+    },
+    {
+      "id": "7",
+      "name": "Macaron Fraise",
+      "photo": "photos/photos7.jpg",
+      "price": 110,
+      "favorite": false,
+      "date_creation": "2024-11-25",
+      "category": "Macaron",
+      "weight": 14,
+      "comments": [],
+      "quantite": 7
+    },
+    {
+      "id": "8",
+      "name": "Macaron Citron",
+      "photo": "photos/photo5.jpg",
+      "price": 110,
+      "favorite": false,
+      "date_creation": "2024-11-24",
+      "category": "Macaron",
+      "weight": 14,
+      "comments": [],
+      "quantite": 5
+    },
+    {
+      "id": "9",
+      "name": "Datte farcie aux amandes",
+      "photo": "photos/photo2.jpg",
+      "price": 70,
+      "favorite": false,
+      "date_creation": "2024-11-23",
+      "category": "Traditionnelle",
+      "weight": 20,
+      "comments": [],
+      "quantite": 10
     }
   ],
-  "admin": [
+  "admin": {
+    "userName": "admin",
+    "password": "Admin123"
+  },
+  "commandes": [
     {
-      "userName": "admin",
-      "password": "12345678"
+      "id": "1002",
+      "sweets": {
+        "items": [
+          {
+            "sweet": {
+              "id": "3",
+              "name": "Macaron",
+              "photo": "photos/photo3.jpg",
+              "price": 60,
+              "favorite": true,
+              "date_creation": "14/11/2024",
+              "quantite": 4,
+              "category": "naissance",
+              "weight": 14
+            },
+            "quantite": 2,
+            "price": 120
+          },
+          {
+            "sweet": {
+              "id": "8",
+              "name": "Macaron Citron",
+              "photo": "photos/photo5.jpg",
+              "price": 110,
+              "favorite": false,
+              "date_creation": "2024-11-24",
+              "category": "Macaron",
+              "weight": 14,
+              "comments": [],
+              "quantite": 5
+            },
+            "quantite": 3,
+            "price": 330
+          }
+        ],
+        "totalPrice": 450
+      }
+    },
+    {
+      "id": "1003",
+      "sweets": {
+        "items": [
+          {
+            "sweet": {
+              "id": "3",
+              "name": "Macaron",
+              "photo": "photos/photo3.jpg",
+              "price": 60,
+              "favorite": true,
+              "date_creation": "14/11/2024",
+              "quantite": 4,
+              "category": "naissance",
+              "weight": 14
+            },
+            "quantite": 2,
+            "price": 120
+          },
+          {
+            "sweet": {
+              "id": "8",
+              "name": "Macaron Citron",
+              "photo": "photos/photo5.jpg",
+              "price": 110,
+              "favorite": false,
+              "date_creation": "2024-11-24",
+              "category": "Macaron",
+              "weight": 14,
+              "comments": [],
+              "quantite": 5
+            },
+            "quantite": 3,
+            "price": 330
+          }
+        ],
+        "totalPrice": 450
+      }
+    },
+    {
+      "id": "1004",
+      "sweets": {
+        "items": [
+          {
+            "sweet": {
+              "id": "3",
+              "name": "Macaron",
+              "photo": "photos/photo3.jpg",
+              "price": 60,
+              "favorite": true,
+              "date_creation": "14/11/2024",
+              "quantite": 4,
+              "category": "naissance",
+              "weight": 14
+            },
+            "quantite": 2,
+            "price": 120
+          },
+          {
+            "sweet": {
+              "id": "8",
+              "name": "Macaron Citron",
+              "photo": "photos/photo5.jpg",
+              "price": 110,
+              "favorite": false,
+              "date_creation": "2024-11-24",
+              "category": "Macaron",
+              "weight": 14,
+              "comments": [],
+              "quantite": 5
+            },
+            "quantite": 3,
+            "price": 330
+          }
+        ],
+        "totalPrice": 450
+      }
+    },
+    {
+      "id": "1005",
+      "sweets": {
+        "items": [
+          {
+            "sweet": {
+              "id": "3",
+              "name": "Macaron",
+              "photo": "photos/photo3.jpg",
+              "price": 60,
+              "favorite": true,
+              "date_creation": "14/11/2024",
+              "quantite": 4,
+              "category": "naissance",
+              "weight": 14
+            },
+            "quantite": 2,
+            "price": 120
+          },
+          {
+            "sweet": {
+              "id": "8",
+              "name": "Macaron Citron",
+              "photo": "photos/photo5.jpg",
+              "price": 110,
+              "favorite": false,
+              "date_creation": "2024-11-24",
+              "category": "Macaron",
+              "weight": 14,
+              "comments": [],
+              "quantite": 5
+            },
+            "quantite": 3,
+            "price": 330
+          }
+        ],
+        "totalPrice": 450
+      }
+    },
+    {
+      "id": "1006",
+      "sweets": {
+        "items": [
+          {
+            "sweet": {
+              "id": "3",
+              "name": "Macaron",
+              "photo": "photos/photo3.jpg",
+              "price": 60,
+              "favorite": true,
+              "date_creation": "14/11/2024",
+              "quantite": 4,
+              "category": "naissance",
+              "weight": 14
+            },
+            "quantite": 2,
+            "price": 120
+          },
+          {
+            "sweet": {
+              "id": "8",
+              "name": "Macaron Citron",
+              "photo": "photos/photo5.jpg",
+              "price": 110,
+              "favorite": false,
+              "date_creation": "2024-11-24",
+              "category": "Macaron",
+              "weight": 14,
+              "comments": [],
+              "quantite": 5
+            },
+            "quantite": 3,
+            "price": 330
+          }
+        ],
+        "totalPrice": 450
+      }
+    },
+    {
+      "id": "1007",
+      "sweets": {
+        "items": [
+          {
+            "sweet": {
+              "id": "3",
+              "name": "Macaron",
+              "photo": "photos/photo3.jpg",
+              "price": 60,
+              "favorite": true,
+              "date_creation": "14/11/2024",
+              "quantite": 4,
+              "category": "naissance",
+              "weight": 14
+            },
+            "quantite": 2,
+            "price": 120
+          },
+          {
+            "sweet": {
+              "id": "8",
+              "name": "Macaron Citron",
+              "photo": "photos/photo5.jpg",
+              "price": 110,
+              "favorite": false,
+              "date_creation": "2024-11-24",
+              "category": "Macaron",
+              "weight": 14,
+              "comments": [],
+              "quantite": 5
+            },
+            "quantite": 3,
+            "price": 330
+          }
+        ],
+        "totalPrice": 450
+      }
+    },
+    {
+      "id": "1008",
+      "sweets": {
+        "items": [],
+        "totalPrice": 0
+      }
+    },
+    {
+      "id": "1009",
+      "sweets": {
+        "items": [
+          {
+            "sweet": {
+              "id": "9",
+              "name": "Datte farcie aux amandes",
+              "photo": "photos/photo2.jpg",
+              "price": 70,
+              "favorite": false,
+              "date_creation": "2024-11-23",
+              "category": "Traditionnelle",
+              "weight": 20,
+              "comments": [],
+              "quantite": 10
+            },
+            "quantite": 2,
+            "price": 140
+          }
+        ],
+        "totalPrice": 140
+      }
     }
   ]
 }

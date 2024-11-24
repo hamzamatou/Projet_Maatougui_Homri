@@ -1,15 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { SweetSelectedComponent } from './sweet-selected.component';
-describe('SweetSelectedComponent', () => {
-  let component: SweetSelectedComponent;
-  let fixture: ComponentFixture<SweetSelectedComponent>;
+
+import { SearchClientComponent } from './search-client.component';
+
+describe('SearchClientComponent', () => {
+  let component: SearchClientComponent;
+  let fixture: ComponentFixture<SearchClientComponent>;
+
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [SweetSelectedComponent]
+      imports: [SearchClientComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(SweetSelectedComponent);
+    fixture = TestBed.createComponent(SearchClientComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

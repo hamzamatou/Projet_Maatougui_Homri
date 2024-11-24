@@ -15,7 +15,6 @@ export class Sweet {
         name: string,
         photo: string,
         price: number,
-      
         date_creation: Date,
         category:string,
         weight:number,

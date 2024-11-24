@@ -28,23 +28,23 @@ ngOnInit(): void {
 onLogin() {
   if (this.loginForm.valid) {
     const { username, password } = this.loginForm.value;
-    const isValid = this.loginService.logIn(username, password);
+    const isValid = username===this.loginObj.userName && password===this.loginObj.password;
     if (isValid) {
       this.router.navigate(['/layout']);
+      localStorage.setItem('state','connected');
     } else {
       alert('Invalid username or password');
       this.loginForm.reset();
+      localStorage.setItem('state','disconnected');
     }
   }
 }
   isValidUserName() {
     return this.loginForm.get('username')?.value === this.loginObj.userName;
   }
-
   isValidPassword() {
     return this.loginForm.get('password')?.value === this.loginObj.password;
   }
-
   isValidForm() {
     return this.loginForm.get('username')?.errors?.['required'] && this.loginForm.get('password')?.errors?.['required'];
   }

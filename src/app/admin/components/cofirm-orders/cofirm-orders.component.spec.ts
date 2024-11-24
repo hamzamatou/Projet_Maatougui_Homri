@@ -1,15 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { SweetSelectedComponent } from './sweet-selected.component';
-describe('SweetSelectedComponent', () => {
-  let component: SweetSelectedComponent;
-  let fixture: ComponentFixture<SweetSelectedComponent>;
+
+import { CofirmOrdersComponent } from './cofirm-orders.component';
+
+describe('CofirmOrdersComponent', () => {
+  let component: CofirmOrdersComponent;
+  let fixture: ComponentFixture<CofirmOrdersComponent>;
+
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [SweetSelectedComponent]
+      imports: [CofirmOrdersComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(SweetSelectedComponent);
+    fixture = TestBed.createComponent(CofirmOrdersComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

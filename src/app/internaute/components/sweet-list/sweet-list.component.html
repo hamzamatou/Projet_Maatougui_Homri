@@ -1,4 +1,5 @@
 <app-navbar (onClick)="onLoadData($event)"></app-navbar>
+<app-search-client (onClick)="onLoadData1($event)"></app-search-client>
 @if(sweets.length>0){
 <ul>
     @for (item of sweets; track item.id) {

@@ -9,6 +9,8 @@ import { LayoutComponent } from './admin/components/layout/layout.component';
 import { ProductsComponent } from './admin/components/products/products.component';
 import { ModifierPasswordComponent } from './admin/components/modifier-password/modifier-password.component';
 import { AddProductComponent } from './admin/add-product/add-product.component';
+import { CofirmOrdersComponent } from './admin/components/cofirm-orders/cofirm-orders.component';
+import { authGuard } from './auth.guard';
 
 export const routes: Routes = [
     {path:'sweets',component:SweetListComponent},
@@ -24,7 +26,7 @@ export const routes: Routes = [
     },
     {
         path: 'layout',
-        component:LayoutComponent,
+        component:LayoutComponent, canActivate:[authGuard],
         children: [
             {
                 path:'products',
@@ -39,9 +41,13 @@ export const routes: Routes = [
                 component:AddProductComponent
             },
             {
-                path:'modifier-password',
+                path:'modify-password',
                 component:ModifierPasswordComponent
 
+            },
+            {
+                path:'orders',
+                component:CofirmOrdersComponent
             }
 
         ]

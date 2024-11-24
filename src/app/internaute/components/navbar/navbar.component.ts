@@ -13,16 +13,15 @@ import { FormsModule } from '@angular/forms';
 export class NavbarComponent implements OnInit {
   private readonly cartService: CartService = inject(CartService);
   nbr: number = 0;
-  searchName: string = "";
   searchCategory: string = "";
   ngOnInit(): void {
     this.cartService.getCartObservable().subscribe(data => {
       this.nbr = data.items.length;
     });
   }
-  @Output() onClick = new EventEmitter<{ category: string; name: string }>();
+  @Output() onClick = new EventEmitter<string>();
   emitSearch(): void {
-    this.onClick.emit({ category: this.searchCategory, name: this.searchName });
+    this.onClick.emit(this.searchCategory);
 }
 
 }

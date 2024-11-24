@@ -6,7 +6,7 @@
               <ul> 
                   <li class="menu">
                       <span>Categories</span>
-                      <select [(ngModel)]="searchCategory" style="background-color:rgb(234, 237, 237) ; border: none;">
+                      <select [(ngModel)]="searchCategory" style="background-color:rgb(234, 237, 237) ; border: none;" (change)="emitSearch()">
                           <option value="tous">tous</option>
                           <option value="traditionelle">Traditionelle</option>
                           <option value="naissance">Naissance</option>
@@ -20,7 +20,7 @@
       </div>
   </header>
 </div>
-<div id="Search">
-  <input type="text" placeholder="chercher votre sweet!" [(ngModel)]="searchName"/>
+<!-- <div id="Search">
+  <input type="text" placeholder="chercher votre sweet!"/>
   <button><i class="bi bi-search" (click)="emitSearch()"></i></button>
-</div>
+</div> -->

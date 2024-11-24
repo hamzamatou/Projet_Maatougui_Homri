@@ -7,8 +7,10 @@ import { JsonPipe } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { SweetService } from '../../../services/sweet.service';
 import { Sweet } from '../../../models/sweet';
-import { FormGroup, FormControl,ReactiveFormsModule} from '@angular/forms';
+import { FormGroup, FormControl, ReactiveFormsModule } from '@angular/forms';
 import { NavbarComponent } from "../navbar/navbar.component";
+import { OrderService } from '../../../services/order.service';
+import { Order } from '../../../models/order';
 
 @Component({
   selector: 'app-shop',
@@ -19,28 +21,44 @@ import { NavbarComponent } from "../navbar/navbar.component";
 })
 export class ShopComponent implements OnInit {
   private readonly cartService: CartService = inject(CartService);
-  private readonly sweetService:SweetService=inject(SweetService);
-  change: FormGroup=new FormGroup({
+  private readonly sweetService: SweetService = inject(SweetService);
+  private readonly orderService: OrderService = inject(OrderService)
+  change: FormGroup = new FormGroup({
     quantite: new FormControl
-   })
+  })
   cart!: Cart;
   ngOnInit(): void {
-      this.cartService.getCartObservable().subscribe(
-          data => this.cart = data
-      );
+    this.cartService.getCartObservable().subscribe(
+      data => this.cart = data
+    );
   }
-  onChangeQuantity(id:number,quantite:number){;
-    this.cartService.changeQuantity(id,quantite);
+  onChangeQuantity(id: number, quantite: number) {
+    ;
+    this.cartService.changeQuantity(id, quantite);
     this.sweetService.getSweet(id).subscribe(
       (sweet: Sweet) => {
         sweet.quantite -= quantite;
-        this.sweetService.updateSweet(sweet).subscribe()})
+        this.sweetService.updateSweet(sweet).subscribe()
+      })
   }
-  OnRemoveFromCart(id:number,cartItem:CartItem){
+  OnRemoveFromCart(id: number, cartItem: CartItem) {
     this.cartService.removeFromCart(id);
     this.sweetService.getSweet(id).subscribe(
       (sweet: Sweet) => {
-        sweet.quantite +=cartItem.quantite ;
-        this.sweetService.updateSweet(sweet).subscribe()})
+        sweet.quantite += cartItem.quantite;
+        this.sweetService.updateSweet(sweet).subscribe()
+      })
   }
-  }
+  onPlaceOrder() {
+    this.orderService.getOrders().subscribe(data => {
+      let lastOrderId = data.length > 0 ? Number(data[data.length - 1].id) : 1000;
+      let newOrderId = (lastOrderId + 1).toString();
+      let newOrder = new Order(newOrderId, this.cart);
+      this.orderService.addOrder(newOrder).subscribe(() => {
+        // Reset the cart only after successfully adding the order
+        localStorage.setItem('Cart','');
+        this.cart.items=[];
+        this.cart.totalPrice=0;
+      });
+})}
+}
