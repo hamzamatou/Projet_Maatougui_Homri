@@ -4,6 +4,9 @@ import { SweetSelectedComponent } from './internaute/components/sweet-selected/s
 import { ShopComponent } from './internaute/components/shop/shop.component';
 import { FavoriteComponent } from './internaute/components/favorite/favorite.component';
 import { ContactComponent } from './internaute/components/contact/contact.component';
+import { LoginComponent } from './admin/components/login/login.component';
+import { LayoutComponent } from './admin/components/layout/layout.component';
+import { ProductsComponent } from './admin/components/products/products.component';
 
 export const routes: Routes = [
     {path:'sweets',component:SweetListComponent},
@@ -12,5 +15,23 @@ export const routes: Routes = [
     {path:'shop',component:ShopComponent},
     {path:'favorite',component:FavoriteComponent},
     {path:'search',component:SweetListComponent},
-    {path:'contact',component:ContactComponent}
+    {path:'contact',component:ContactComponent},
+    {
+        path: 'login',
+        component: LoginComponent
+    },
+    {
+        path: 'layout',
+        component:LayoutComponent,
+        children: [
+            {
+                path:'products',
+                component:ProductsComponent
+            },
+            {
+                path:'',
+                redirectTo:'products',pathMatch:'full'
+            }
+        ]
+    },
 ];

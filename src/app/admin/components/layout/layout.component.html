@@ -1,0 +1,63 @@
+<div id="viewport">
+    <div id="sidebar" [hidden]="isSidebarVisible">
+        <header class="p-3">
+            <a class="text-decoration-none" >My App</a>
+        </header>
+        <ul class="nav flex-column">
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <i class="bi bi-house"></i> Dashboard
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <i class="bi bi-link"></i> Shortcuts
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <i class="bi bi-grid"></i> Overview
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <i class="bi bi-calendar"></i> Events
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <i class="bi bi-info-circle"></i> About
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <i class="bi bi-gear"></i> Services
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <i class="bi bi-chat-dots"></i> Contact
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div id="content" style="flex-grow: 1;">
+        <nav class="navbar navbar-light bg-light mb-3">
+            <div class="container-fluid justify-content-between">
+                <i class="bi bi-house" (click)="toggleSidebar()"></i>
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="bi bi-bell text-danger"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item"><a href="#" class="nav-link">Test User</a></li>
+                </ul>
+            </div>
+        </nav>
+        <router-outlet></router-outlet>
+    </div>
+</div>
+<script>
+    let sideBar=document.getElementById('sidebar');
+</script>

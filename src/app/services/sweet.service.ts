@@ -29,4 +29,7 @@ export class SweetService {
     }
     )
   }
+  deleteSweet(id: number): Observable<void> {
+    return this.http.delete<void>(`${API}/${id}`);
+  }
 }

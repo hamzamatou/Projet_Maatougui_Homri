@@ -7,7 +7,7 @@
       "price": 75,
       "favorite": true,
       "date_creation": "14/11/2024",
-      "quantite": 16,
+      "quantite": 11,
       "category": "traditionelle",
       "weight": 20,
       "comments": [
@@ -29,26 +29,21 @@
       ]
     },
     {
-      "id": "2",
-      "name": "Datte farcie aux amandes",
-      "photo": "photos/photo2.jpg",
-      "price": 75,
-      "favorite": false,
-      "date_creation": "13/11/2024",
-      "quantite": 2,
-      "category": "traditionelle",
-      "weight": 20
-    },
-    {
       "id": "3",
       "name": "Macaron chocolat",
       "photo": "photos/photo3.jpg",
       "price": 60,
       "favorite": false,
       "date_creation": "14/11/2024",
-      "quantite": 4,
+      "quantite": 11,
       "category": "naissance",
       "weight": 14
+    }
+  ],
+  "admin":[
+    {
+      "userName":"admin",
+      "password":"12345678"
     }
   ]
 }
