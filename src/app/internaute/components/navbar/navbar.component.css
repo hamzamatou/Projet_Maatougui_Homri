@@ -152,7 +152,6 @@ option {
   cursor: pointer;
   transition: transform 0.2s ease, color 0.2s ease;
 }
-
 option:hover {
   color: #db1f83;
   transform: translateX(10px);

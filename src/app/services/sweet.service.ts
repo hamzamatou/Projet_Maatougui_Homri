@@ -17,20 +17,8 @@ export class SweetService {
   updateSweet(sweet: Sweet): Observable<Sweet> {
     return this.http.put<Sweet>(API+"/"+sweet.id, sweet);
   }
-  getSearchSweet(name: string, category: string): Observable<Sweet[]> {
-    return new Observable<Sweet[]>(observer => {
-      this.getSweets().subscribe(sweets => {
-        const filteredSweets = sweets.filter(sweet =>
-          sweet.name.toUpperCase().includes(name.toUpperCase()) &&
-        sweet.category.toUpperCase().includes(category.toUpperCase())
-        );
-      }
-      )
-    }
-    )
-  }
   deleteSweet(id: number): Observable<void> {
-    return this.http.delete<void>(`${API}/${id}`);
+    return this.http.delete<void>(API+"/"+id);
   }
   addSweet(sweet: Sweet): Observable<Sweet> {
     return this.http.post<Sweet>(API, sweet);

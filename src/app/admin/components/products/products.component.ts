@@ -34,14 +34,13 @@ onSearch(name: string): void {
   console.log(this.searchName);
   this.sweetservice.getSweets().subscribe(sweets => {
     if (this.searchName === '') {
-      this.sweets = sweets; // Reset to all sweets if search is empty
+      this.sweets = sweets;
     } else {
       this.sweets = sweets.filter(sweet => {
         const sweetName = sweet.name ? sweet.name.toUpperCase() : '';
         return sweetName.includes(this.searchName.toUpperCase());
       });
     }
-    console.log(this.sweets);
   });
 }
 }

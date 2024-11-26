@@ -42,9 +42,9 @@ export class SweetListComponent implements OnInit {
   }
   applyFilters(): void {
     this.sweetservice.getSweets().subscribe(sweets => {
-      if (this.searchName === '' && this.searchCategory === 'tous') {
+      if (!this.searchName && this.searchCategory === 'tous') {
         this.sweets = sweets;
-      } else if(this.searchName && this.searchCategory==='tous' || this.searchName || this.searchCategory) {
+      } else if(this.searchName && this.searchCategory ==='tous' || this.searchName || this.searchCategory) {
         this.sweets = sweets.filter(sweet => {
           const sweetName = sweet.name ? sweet.name.toUpperCase() : '';
           const sweetCategory = sweet.category ? sweet.category.toUpperCase() : '';

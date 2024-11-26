@@ -13,6 +13,6 @@ export class LoginService {
     return this.http.get<{ userName: string; password: string }>(API);
   }
   modifyLogin(login: { userName: string; password: string }): Observable<{ userName: string; password: string }> {
-    return this.http.put<{ userName: string; password: string }>(`${API}`,login);
+    return this.http.put<{ userName: string; password: string }>(API,login);
   }
 }

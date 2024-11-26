@@ -39,13 +39,4 @@ onLogin() {
     }
   }
 }
-  isValidUserName() {
-    return this.loginForm.get('username')?.value === this.loginObj.userName;
-  }
-  isValidPassword() {
-    return this.loginForm.get('password')?.value === this.loginObj.password;
-  }
-  isValidForm() {
-    return this.loginForm.get('username')?.errors?.['required'] && this.loginForm.get('password')?.errors?.['required'];
-  }
 }

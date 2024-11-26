@@ -20,7 +20,7 @@ export class AddProductComponent implements OnInit {
 
   ngOnInit(): void {
     this.sweetForm = this.formbuilder.group({
-      name: ['', [Validators.required, Validators.pattern('^[A-Z].*')]], // Déplacer Validators.pattern ici
+      name: ['', [Validators.required, Validators.pattern('^[A-Z].*')]],
       description: ['', Validators.required],
       price: ['0', Validators.required],
       category: ['', Validators.required],
