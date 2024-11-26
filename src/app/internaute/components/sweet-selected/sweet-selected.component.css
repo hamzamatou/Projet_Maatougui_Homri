@@ -135,3 +135,9 @@ li{
 .bi-heart-fill {
   color: red;
 }
+#card2 {
+  border: 1px solid #ccc;
+  padding: 20px;
+  text-align: center;
+  margin: 10px;
+}

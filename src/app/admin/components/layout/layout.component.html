@@ -1,45 +1,36 @@
-<div id="viewport">
-    <div id="sidebar" [hidden]="isSidebarVisible">
-        <header class="p-3">
-            <a class="text-decoration-none" >My App</a>
-        </header>
-        <ul class="nav flex-column">
-            <li class="nav-item">
-                <a routerLink="/layout/add-product" class="nav-link">
-                    <i class="bi bi-cart-plus"></i> add-product
-
-                </a>
-            </li>
-            <li class="nav-item">
-                <a  class="nav-link" routerLink="/layout/orders" >
-                    <i class="bi bi-file-earmark-text"></i> orders
-
-                </a>
-            </li>
-            <li class="nav-item">
-                <a routerLink="/layout/modify-password" class="nav-link">
-                    <i class="bi bi-person-lock"></i> modifier-mot de pass
-                </a>
-            </li>
+<div style="display: flex; flex-direction: row; justify-content: flex-end; align-items: flex-start; background-color: #eeeded;">
+    <div class="container mt-3" style="width: 70px;">
+        <nav class="vertical-nav ">
+            <ul class="navbar-nav" style="display: flex; justify-content: space-around;">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" routerLink="/layout/products">
+                        <i class="bi bi-house-door"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/layout/orders">
+                        <i class="bi bi-list-columns-reverse"></i>
+                    </a>
+                </li>
+                <li class="nav-item" >
+                    <a class="nav-link" routerLink="/layout/modify-password">
+                        <i class="bi bi-arrow-clockwise"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/layout/add-product">
+                        <i class="bi bi-plus-circle"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" (click)="onDisconnect()">
+                        <i class="bi bi-box-arrow-left"></i>
+                    </a>
+                </li>
             </ul>
-    </div>
-    <div id="content" style="flex-grow: 1;">
-        <nav class="navbar navbar-light bg-light mb-3">
-            <div class="container-fluid justify-content-between">
-                <i class="bi bi-house" (click)="toggleSidebar()"></i>
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">
-                            <i class="bi bi-bell text-danger"></i>
-                        </a>
-                    </li>
-                    <li class="nav-item"><a href="#" class="nav-link">Test User</a></li>
-                </ul>
-            </div>
         </nav>
+    </div>
+    <div style="flex: 2; margin-left: 70px; margin-top: 70px;">
         <router-outlet></router-outlet>
     </div>
 </div>
-<script>
-    let sideBar=document.getElementById('sidebar');
-</script>

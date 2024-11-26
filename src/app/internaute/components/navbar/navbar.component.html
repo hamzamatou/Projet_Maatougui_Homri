@@ -7,9 +7,10 @@
                   <li class="menu">
                       <span>Categories</span>
                       <select [(ngModel)]="searchCategory" style="background-color:rgb(234, 237, 237) ; border: none;" (change)="emitSearch()">
-                          <option value="tous">tous</option>
-                          <option value="traditionelle">Traditionelle</option>
-                          <option value="naissance">Naissance</option>
+                        <option selected>tous</option>
+                        @for (item of categories; track $index) {
+                            <option [value]="item" >{{item}}</option>
+                        }
                       </select>
                   </li>
                   <li><a class="menu" routerLink="/favorite"><i class="bi bi-heart"></i></a></li>

@@ -30,37 +30,27 @@ export class SweetListComponent implements OnInit {
     });
   }
 
-  onLoadData1(name: string): void {
+  onLoadName(name: string): void {
     this.searchName = name;
     this.applyFilters();
   }
 
-  onLoadData(category: string): void {
+  onLoadCategory(category: string): void {
     this.searchCategory = category;
     console.log(this.searchCategory, this.searchName);
     this.applyFilters();
   }
-
   applyFilters(): void {
-    this.filteredSweets = this.sweets.filter(sweet => {
-      const sweetName = sweet.name ? sweet.name.toUpperCase() : '';
-      const sweetCategory = sweet.category ? sweet.category.toUpperCase() : '';
-      return sweetName.includes(this.searchName.toUpperCase()) && 
-             (this.searchCategory === 'tous' || sweetCategory.includes(this.searchCategory.toUpperCase()));
-    });
-    console.log(this.filteredSweets);
+    this.sweetservice.getSweets().subscribe(sweets => {
+      if (this.searchName === '' && this.searchCategory === 'tous') {
+        this.sweets = sweets;
+      } else if(this.searchName && this.searchCategory==='tous' || this.searchName || this.searchCategory) {
+        this.sweets = sweets.filter(sweet => {
+          const sweetName = sweet.name ? sweet.name.toUpperCase() : '';
+          const sweetCategory = sweet.category ? sweet.category.toUpperCase() : '';
+          return sweetName.includes(this.searchName.toUpperCase()) && sweetCategory.includes(this.searchCategory.toUpperCase());
+        })
+      }
+    })
   }
-  // onLoadData(category: string) {
-  //   this.searchCategory = category
-  //   console.log(this.searchCategory);
-  //   console.log(this.searchName);
-  //   this.sweetservice.getSweets().subscribe(sweets => {
-  //     if(this.searchName===''&& this.searchCategory==='tous'){
-  //       this.sweets=sweets;
-  //     }else{
-  //      this.sweets = sweets.filter(sweet => {
-  //       const sweetName = sweet.name ? sweet.name.toUpperCase() : '';
-  //       const sweetCategory = sweet.category ? sweet.category.toUpperCase() : '';
-  //       return sweetName.includes(this.searchName.toUpperCase()) && sweetCategory.includes(this.searchCategory.toUpperCase());
-  //     });}
 }

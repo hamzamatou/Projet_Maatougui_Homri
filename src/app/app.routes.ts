@@ -21,7 +21,7 @@ export const routes: Routes = [
     {path:'search',component:SweetListComponent},
     {path:'contact',component:ContactComponent},
     {
-        path: 'login',
+        path: 'admin',
         component: LoginComponent
     },
     {

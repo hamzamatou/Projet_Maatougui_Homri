@@ -1,12 +1,10 @@
-body{
-  background-color: rgb(224, 221, 221);
-  
-}
+
 #nav{
   position: sticky;
   top: 0;
   z-index: 1000;
   font-size: 1.2rem;
+  margin-bottom: 50px;
 }
 header {
   position: relative;
@@ -148,4 +146,14 @@ li select{
   border-bottom: 1px solid lightgrey;
   font-size: 1.1rem;
   font-weight: 100;
+}
+option {
+  padding: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+option:hover {
+  color: #db1f83;
+  transform: translateX(10px);
 }

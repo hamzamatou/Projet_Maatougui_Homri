@@ -8,13 +8,11 @@ import { LoginService } from '../../../services/login.service';
   standalone: true,
   imports: [ReactiveFormsModule],
   templateUrl: './modifier-password.component.html',
-  styleUrls: ['./modifier-password.component.css'] // Correction ici
+  styleUrls: ['./modifier-password.component.css']
 })
 export class ModifierPasswordComponent implements OnInit {
   passwordForm!: FormGroup;
   login: { userName: string; password: string } = { userName: '', password: '' };
-
-  // Injecter les dépendances
   private readonly formbuilder: FormBuilder = inject(FormBuilder);
   private readonly loginservice: LoginService = inject(LoginService);
   private readonly router: Router = inject(Router);
@@ -33,6 +31,7 @@ export class ModifierPasswordComponent implements OnInit {
   }
 
   onSubmit() {
+    if(this.passwordForm.valid){
     const currentPassword = this.passwordForm.get('currentPassword')?.value;
     const newPassword = this.passwordForm.get('newPassword')?.value;
     const confirmPassword = this.passwordForm.get('confirmPassword')?.value;
@@ -60,6 +59,7 @@ export class ModifierPasswordComponent implements OnInit {
     );
   }
 }
+  }
 isValidPassword(){
   return this.passwordForm.get('newPassword')?.errors?.['pattern'] && this.passwordForm.get('newPassword')?.dirty
 }

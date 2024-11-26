@@ -1,8 +1,6 @@
 <h2>Ajouter un produit sucré</h2>
 <div class="container">
   <form [formGroup]="sweetForm" (ngSubmit)="onSubmit()">
-    
-    <!-- Nom du produit -->
     <div class="mb-3">
       <label for="name" class="form-label">Nom du produit</label>
       <input id="name" formControlName="name" class="form-control">

@@ -1,4 +1,4 @@
-<div class="card">
+<div class="card" id="zone">
     <img [src]="sweet.photo" class="card-img-top" alt="{{ sweet.name }}">
     <div class="card-body">
         <h5  
@@ -8,14 +8,14 @@
         {{ sweet.name }}
     </h5>
       @if(isEditing){
-      <div >
+      <div [formGroup]="modifyForm" >
         <div class="form-group">
           <label for="price">Prix (TND)</label>
           <input
             id="price"
             type="number"
             class="form-control"
-            [(ngModel)]="sweet.price"
+            formControlName="price"
           />
         </div>
         <div class="form-group">
@@ -24,7 +24,16 @@
             id="quantite"
             type="number"
             class="form-control"
-            [(ngModel)]="sweet.quantite"
+            formControlName="quantite"
+          />
+        </div>
+        <div class="form-group">
+          <label for="quantite">URL photo</label>
+          <input
+            id="url"
+            type="text"
+            class="form-control"
+            formControlName="URL"
           />
         </div>
         <button class="btn btn-success" (click)="onSave()">Enregistrer</button>

@@ -1,7 +1,7 @@
 import { NgClass } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { RouterLink, RouterOutlet } from '@angular/router';
+import { Router, RouterLink, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-layout',
@@ -12,6 +12,7 @@ import { RouterLink, RouterOutlet } from '@angular/router';
 })
 export class LayoutComponent {
   searchValue:string='';
+  private readonly router:Router=inject(Router);
   ngOnInit(): void {
     const storedSearchValue = localStorage.getItem("search");
     if (storedSearchValue) {
@@ -23,10 +24,11 @@ export class LayoutComponent {
     localStorage.setItem("search", this.searchValue);
     console.log("Searching for:", this.searchValue);
   }
-  isSidebarVisible=false;
-  toggleSidebar(): void {
-    this.isSidebarVisible = !this.isSidebarVisible;
-    console.log(this.isSidebarVisible) // Toggle the sidebar visibility
-  }
+  onDisconnect(){
+    localStorage.setItem("state", "disconnected");
+    this.router.navigate(['/admin']);
+    }
+    
+
 }
 

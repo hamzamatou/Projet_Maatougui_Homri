@@ -18,7 +18,6 @@
                 {{sweet.weight|nombrepiece}}
               </li>
               <li>Date creation:{{sweet.date_creation}}</li>
-          
           </span>
         </ul>
           <form [formGroup]="quantiteForm">
@@ -31,6 +30,9 @@
               @for (item of sweet.comments; track $index) {
                 <li class="list-group-item">Le <span style="font-weight: bold;">{{ item.date_comment|date: 'dd/MM/yyyy' }}</span> {{ item.user_name}} :"{{ item.message }}"
                 </li>
+              }
+              @if (sweet.comments?.length==0) {
+                <p style="position: relative; left: 50px; color: rgb(223, 94, 94); text-decoration: underline;"> <i class="bi bi-folder-x"></i> aucun commentaire trouvé</p>
               }
             </ul>
             <p (click)="onDisplayCommentZone()">voulez vous ajouter un commentaire?</p>
@@ -57,4 +59,32 @@
     </div>
   </div>
 </div>
-  <button routerLink="/sweets" id="retour" ><i class="bi bi-arrow-bar-up"></i>Retour</button>
+  <div class="row text-center" style="width: 800px; position: relative; left: 350px;">
+    <div class="col-md-4 mb-3">
+      <div class="card p-3 border-light shadow-sm" style="background-color: #f9f9f9; font-size: 0.8rem;">
+        <i class="bi bi-truck display-6 text-secondary"></i>
+        <h4 class="mt-3">Livraison</h4>
+        <p>Livraison à domicile dans toute <br> la Tunisie entre 24 heures et 72 heures</p>
+      </div>
+    </div>
+    <div class="col-md-4 mb-3">
+      <div class="card p-3 border-light shadow-sm" style="background-color: #f9f9f9; font-size: 0.8rem;">
+        <i class="bi bi-shield-lock display-6 text-secondary"></i>
+        <h4 class="mt-3">Paiement sécurisé</h4>
+        <p>Par carte bancaire, ou en paiement à la livraison</p>
+      </div>
+    </div>
+    <div class="col-md-4 mb-3">
+      <div class="card p-3 border-light shadow-sm" style="background-color: #f9f9f9; font-size: 0.8rem;">
+        <i class="bi bi-headset display-6 text-secondary"></i>
+        <h4 class="mt-3">Service client</h4>
+        <p>
+          Toujours disponible<br>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="d-flex justify-content">
+    <button routerLink="/sweets" id="retour" ><i class="bi bi-arrow-bar-up"></i>Retour</button>
+  </div>
+  

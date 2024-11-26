@@ -1,5 +1,5 @@
 import { Component,EventEmitter,inject, OnInit, Output} from '@angular/core';
-import { ActivatedRoute, } from '@angular/router';
+import { ActivatedRoute, RouterLink, } from '@angular/router';
 import { Sweet } from '../../../models/sweet';
 import { SweetService } from '../../../services/sweet.service';
 import { FormBuilder, FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
@@ -9,11 +9,12 @@ import { DatePipe, DecimalPipe, JsonPipe, NgClass } from '@angular/common';
 import { NavbarComponent } from "../navbar/navbar.component";
 import { NombrepiecePipe } from '../../../nombrepiece.pipe';
 import { FavoriteService } from '../../../services/favorite.service';
+import { CurrencyService } from '../../../services/geolocation.service';
 
 @Component({
   selector: 'app-sweet-selected',
   standalone: true,
-  imports: [ReactiveFormsModule, JsonPipe, DatePipe, NavbarComponent,DecimalPipe,NombrepiecePipe,NgClass],
+  imports: [ReactiveFormsModule, JsonPipe, DatePipe, NavbarComponent,DecimalPipe,NombrepiecePipe,NgClass,RouterLink],
   templateUrl: './sweet-selected.component.html',
   styleUrl: './sweet-selected.component.css'
 })
@@ -87,5 +88,7 @@ test = false;
         this.favoriteService.removeFavorite(sweet);
       }
   }
+ 
 }
+
 

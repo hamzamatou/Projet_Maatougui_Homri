@@ -50,6 +50,7 @@ export class AddProductComponent implements OnInit {
       this.sweetservice.addSweet(sweetdata).subscribe(
         data => {
           alert('Produit ajouté avec succès');
+          this.sweetForm.reset();
         }
       );
   }
