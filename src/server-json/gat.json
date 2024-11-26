@@ -45,12 +45,12 @@
       "name": "Macaron Fraise",
       "photo": "photos/photo7.jpg",
       "price": 110,
-      "favorite": false,
+      "favorite": true,
       "date_creation": "2024-11-25",
       "category": "Macaron",
       "weight": 14,
       "comments": [],
-      "quantite": 7
+      "quantite": 15
     },
     {
       "id": "8",
@@ -316,6 +316,30 @@
           }
         ],
         "totalPrice": 228
+      }
+    },
+    {
+      "id": "1004",
+      "sweets": {
+        "items": [
+          {
+            "sweet": {
+              "id": "4",
+              "name": "Macaron Chocolat",
+              "photo": "photos/photo3.jpg",
+              "price": 110,
+              "favorite": false,
+              "date_creation": "2024-11-24",
+              "category": "Macaron",
+              "weight": 14,
+              "comments": [],
+              "quantite": 20
+            },
+            "quantite": 2,
+            "price": 220
+          }
+        ],
+        "totalPrice": 223
       }
     }
   ]

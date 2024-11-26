@@ -40,9 +40,9 @@
         3DT
       })
   </div>
-  <div> <button (click)="onPlaceOrder()">confirmer</button></div>
+  <div class="d-flex justify-content-end" style="margin-top: 20px;"> <button (click)="onPlaceOrder()" class="btn btn-outline-secondary" >confirmer</button></div>
   <div class="d-flex justify-content-center">
-  <button routerLink="/sweets" id="retour" ><i class="bi bi-arrow-bar-up"></i>Retour</button>
 </div>
 </div>}@else {
   <h1 style="text-align: center;">Désole,aucun produit selectionné<i class="bi bi-emoji-frown"></i></h1>}
+  <button routerLink="/sweets" id="retour" style="position: relative; left: 550px;"><i class="bi bi-arrow-bar-up"></i>Retour</button>

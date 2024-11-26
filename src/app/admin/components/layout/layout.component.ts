@@ -13,17 +13,6 @@ import { Router, RouterLink, RouterOutlet } from '@angular/router';
 export class LayoutComponent {
   searchValue:string='';
   private readonly router:Router=inject(Router);
-  ngOnInit(): void {
-    const storedSearchValue = localStorage.getItem("search");
-    if (storedSearchValue) {
-      this.searchValue = storedSearchValue;
-    }
-  }
-
-  onSearch() {
-    localStorage.setItem("search", this.searchValue);
-    console.log("Searching for:", this.searchValue);
-  }
   onDisconnect(){
     localStorage.setItem("state", "disconnected");
     this.router.navigate(['/admin']);
